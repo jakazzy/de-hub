@@ -45,8 +45,10 @@
     margin: 3rem auto;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     display: flex;
+    flex-wrap: wrap;
     border-left: 5px solid rgba(94, 164, 165, 255);
     border-radius: 5px;
+    background-color: white;
   }
 
   .job-card__logo {
@@ -124,5 +126,39 @@
     padding: 0.3rem;
     border-radius: 8px;
     text-align: center;
+  }
+
+  @media only screen and (max-width: 768px) {
+    .job-card {
+      width: 90%;
+      height: 17rem;
+    }
+
+    .logo {
+      width: 5rem;
+      height: 5rem;
+      text-align: center;
+      border-radius: 50%;
+      background-color: #000;
+      color: #fff;
+      position: absolute;
+      top: -6%;
+      left: -36%;
+      transform: translateY(-50%);
+      display: flex;
+      justify-content: center;
+      align-content: center;
+      flex-direction: column;
+    }
+
+    .job-card__Details {
+      width: 70%;
+    }
+
+    .job-card__Details-header,
+    .job-card__Details-footer,
+    .job-card__tags {
+      width: 100%;
+    }
   }
 </style>
